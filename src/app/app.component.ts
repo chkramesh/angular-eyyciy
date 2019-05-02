@@ -41,6 +41,9 @@ export class AppComponent implements OnInit {
         });
     }
 
+    // The onChanges() function is simple. It gets the country control within
+    // the addressForm and subscribes to any value changes. Whenever the value of the
+    // Country field changes, the function is executed.
     onChanges() {
       console.log('onChanges');
       console.log('onChanges country = ' +  this.addressForm.get('country').value);
