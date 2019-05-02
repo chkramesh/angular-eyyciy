@@ -41,6 +41,12 @@ export class AppComponent implements OnInit {
         });
     }
 
+    // https://www.technouz.com/4725/disable-angular-reactiveform-input-based-selection/
+
+    // Now use the power of Observables to watch for changes to the form. Essentially,
+    // a subscription will be set up to execute a function every time the
+    // value of Country is changed. 
+
     // The onChanges() function is simple. It gets the country control within
     // the addressForm and subscribes to any value changes. Whenever the value of the
     // Country field changes, the function is executed.
