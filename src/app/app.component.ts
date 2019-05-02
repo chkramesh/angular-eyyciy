@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
        this.initAddressForm();
+       this.onChanges();
     }
 
     initAddressForm() {
@@ -41,8 +42,13 @@ export class AppComponent implements OnInit {
     }
 
     onChanges() {
+      console.log('onChanges');
+      console.log('onChanges country = ' +  this.addressForm.get('country').value);
+      console.log('onChanges state = ' +  this.addressForm.get('state').value);
+
       this.addressForm.get('country').valueChanges
       .subscribe(selectedCountry => {
+           console.log('onChanges selectedCountry = ' +  selectedCountry);
           if (selectedCountry != 'USA') {
               this.addressForm.get('state').reset();
               this.addressForm.get('state').disable();
